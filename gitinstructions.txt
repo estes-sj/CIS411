@@ -16,3 +16,9 @@ git init
 $ git add *.c
 $ git add LICENSE
 $ git commit -m 'Initial project version'
+
+
+
+git add *
+git commit -m "message"
+git push origin <branch>
