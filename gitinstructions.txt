@@ -1,0 +1,18 @@
+Switch
+
+$ git checkout <existing_branch>
+
+for new branch
+$ git checkout -b <new_branch>
+
+
+git remote add origin <remote_repo_url>
+
+change remote
+git remote set-url origin git://new.url.here
+
+
+git init
+$ git add *.c
+$ git add LICENSE
+$ git commit -m 'Initial project version'
