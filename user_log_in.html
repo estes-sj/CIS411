@@ -1,0 +1,45 @@
+<!--User Login by Samuel Estes-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up - Bargain Bites</title>
+    <link rel="stylesheet" href="user_signin.css">
+</head>
+
+<body>
+    <header>
+        <img src="BargainBites.png" id="logo" alt="BargainBites">
+        <hr>
+    </header>
+    <section name="sign_form" id="sign_form">
+        <h1>Sign-In</h1>
+        <p>
+            Don't have an account? <a href="client_user_registration.html">Sign Up</a>
+        </p>
+        <form action="/dashboard.html">
+            <div class="outerform" style="text-align: center;">
+                <div style="display: inline-block; text-align: left;">
+                    <div>
+                        <label for="email">Email</label>
+                        <br>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="password">Password </label>
+                        <br>
+                        <input type="password" name="password" id="password" minlength="8" maxlength="20" required>
+                    </div>
+                    <br>
+                </div>
+                <button id="signup">Sign In</button>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
