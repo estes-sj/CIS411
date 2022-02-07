@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.gpd-header{
+  margin:0;
+}
+#i64y{
+  display:inherit;
+  text-align:center;
+  text-decoration:none;
+  font-size:60px;
+}
+#itmsh{
+  display:none;
+}
+#iopps{
+  display:none;
+}
+#ictx5{
+  background-image:url('https://cdn.grapedrop.com/u405ebc683e5649b689cfbee83de6fb86/66768bb6745f4ee0aba446ce930bb5a8_bargainbites.png');
+  background-size:cover;
+  background-position:center center;
+  background-attachment:scroll;
+  background-repeat:no-repeat;
+  width:250px;
+  height:317px;
+  text-align:left;
+  top:auto;
+  right:45%;
+  bottom:0%;
+  left:45%;
+  position:sticky;
+}
