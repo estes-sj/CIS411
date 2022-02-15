@@ -28,7 +28,7 @@ form {
     font-size: 125%;
     font-weight: 900;
 }
-#signup {
+#submit {
     border-radius: 20px;
     background-color: #81B29A;
     color: #F4F1DE;
@@ -37,7 +37,7 @@ form {
     font-size: 120%;
     text-align: center;
 }
-#email {
+#fusername, #fpassword {
     width: 350px;
 }
 input {
