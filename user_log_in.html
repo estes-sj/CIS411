@@ -1,4 +1,5 @@
 <!--User Login by Samuel Estes-->
+<!--Form Validation Authored by Samuel Estes-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,25 +21,48 @@
         <p>
             Don't have an account? <a href="client_user_registration.html">Sign Up</a>
         </p>
-        <form action="Dashboard.html">
+        <form name="loginForm" action="Dashboard.html" onsubmit="return validateForm()" method="post">
             <div class="outerform" style="text-align: center;">
                 <div style="display: inline-block; text-align: left;">
                     <div>
-                        <label for="email">Email</label>
+                        <label for="fusername">Email</label>
                         <br>
-                        <input type="email" name="email" id="email" required>
+                        <input type="text" name="fusername" id="fusername">
                     </div>
                     <br>
                     <div>
-                        <label for="password">Password </label>
+                        <label for="fpassword">Password </label>
                         <br>
-                        <input type="password" name="password" id="password" minlength="8" maxlength="20" required>
+                        <input type="password" name="fpassword" id="fpassword">
                     </div>
                     <br>
                 </div>
-                <button id="signup">Sign In</button>
+                <input type="submit" value="Sign-In" id="submit">
             </div>
         </form>
+        <script>
+            function validateForm() {
+                let x = document.forms["loginForm"]["fusername"].value;
+                if (x == "") {
+                    alert("Email must be filled out");
+                    return false;
+                }
+                else if (!x.includes("@")) {
+                    alert("Email not valid, must contain a '@'");
+                    return false;
+                }
+
+                let y = document.forms["loginForm"]["fpassword"].value;
+                if (y == "") {
+                    alert("Password must be filled out.");
+                    return false;
+                }
+                else if (y.length < 8 || y.length > 20) {
+                    alert("Password must be between 8 and 20 characters.");
+                    return false;
+                }
+            }
+        </script>
     </section>
 </body>
 
