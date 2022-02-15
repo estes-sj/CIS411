@@ -1,5 +1,5 @@
 body { 
-    background-color:#f4f1de;
+    background-color: #f4f1de;
 }
 img { 
     margin-left: auto; 
@@ -39,6 +39,7 @@ img {
     text-align:center;
     color:#3D405B;
     text-transform: uppercase; 
+    background-color: #f4f1de;
 }
 
 h2{ 
@@ -104,7 +105,11 @@ td,th{
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size:20px;
     text-decoration: underline;
+    background-color:#f4f1de; 
+}
 
+#id{ 
+    background-color:#f4f1de; 
 }
 
 
