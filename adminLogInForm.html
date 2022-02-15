@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-     <link rel="stylesheet" href="adminForms.css" />
+     <link rel="stylesheet" href="adminForm.css" />
      <title>Administrator Log In</title>
 </head>
 
@@ -12,19 +12,18 @@
           <br>
           <h1 class="sign" align="center"> Administrator Sign In</h1>
           <br>
-          <form>
-               <label1 for "username"> Username</label>
-                    <input type="text" id="user" name="user">
-                    <br>
-                    <label2 for "password"> Password</label>
-                         <input type="text" is="password" name="password">
-          </form>  
-          <img src="media.jpg" alt="media" width="100" height="50">
-
-          <input type="button" class="button" value=" Log In">
-          <br>
-          <input type="button" class="forgot" value=" Forgot Password?">
-          <input type="button" class="newAcnt" value="Register New Admin Account">          
+          <form action="AdminDashboard.html">
+               <label for "username"> Username</label>
+               <input type="text" id="user" name="user">
+               <br>
+               <label for "password"> Password</label>
+               <input type="text" is="password" name="password">
+               <img src="media.jpg" alt="media" width="100" height="50">
+               <button id="loginbutton"> Log In</button>
+               <br>
+               <input type="button" class="forgot" value=" Forgot Password?">
+               <input type="button" class="newAcnt" value="Register New Admin Account">
+          </form>
      </div>
 </body>
 

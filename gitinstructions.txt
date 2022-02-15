@@ -12,13 +12,23 @@ change remote
 git remote set-url origin git://new.url.here
 
 
+NEW INITIALIZATION
 git init
-$ git add *.c
-$ git add LICENSE
-$ git commit -m 'Initial project version'
-
-
-
+git remote add origin https://github.com/primetime728/CIS411
+git fetch
+git checkout <branch>
 git add *
 git commit -m "message"
 git push origin <branch>
+
+
+
+
+-------------------------------------------------------
+#ADD NEW
+git add *
+git commit -m "message"
+git push origin <branch>
+
+#GET NEW
+git pull origin <branch>
