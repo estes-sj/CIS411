@@ -16,65 +16,69 @@ header {
   padding-bottom: 50px;
 }
 
-#email {
-  padding-bottom: 5px;
-}
-
-#name {
-  padding-bottom: 5px;
-}
-
-#phone {
-  padding-bottom: 5px;
-}
-#biography {
+#bio {
   padding-bottom: 150px;
-  padding-right: 15px;
+  padding-right: 50px;
 }
 
 div {
-  text-align: center;
-}
-p {
-  text-align: center;
+  vertical-align: middle;
 }
 
 img {
-  display: block;
-  align-content: center;
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 10%;
+  left: 0px;
+  top: 0px;
+  width: 100px;
+}
+.center {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
 }
 
-.UserProfile {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
+label, input{
+  display: flex;
+  vertical-align: middle;
+  width: 300px;
+
 }
-.title {
+
+label{
   color: black;
-  font-size: 18px;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 3px;
+  vertical-align: middle;
 }
+
+form, input{
+  box-sizing: border-box;
+  padding: 5px;
+  vertical-align: middle;
+
+
+}
+
+form{
+  width: 400px;
+  margin-top: 10px;
+  vertical-align: middle;
+  outline: black 10px;
+}
+
 button {
-  border: none;
-  outline: 0;
-  display: inline-block;
   padding: 8px;
+  margin-top: 10px;
   color: black;
+  vertical-align: middle;
   background-color: #81B29A;
-  text-align: center;
   cursor: pointer;
-  width: 30%;
+  width: 300px;
   font-size: 18px;
-}
-
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
+  outline: black 10px;
 }
 
 button:hover, a:hover {
