@@ -1,0 +1,133 @@
+<!---- Author: Cadet Emily Hattman, HR: w3schools.com, https://www.geeksforgeeks.org/check-if-a-string-contains-uppercase-lowercase-special-characters-and-numeric-values/-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta name="viewport" content="width= device-width, initial-scale=1">
+     <link rel="stylesheet" href="adminForm.css" />
+     <title>Administrator Log In</title>
+</head>
+
+<body>
+     <div class="main">
+          <img src="BargainBites.jpg" width="300" height="200">
+          <br>
+          <h1 class="sign"> Administrator Sign In</h1>
+          <br>
+          <form action="AdminDashboard.html" name="adminForm" onsubmit="return validateForm()" method="post">
+               <label for="username"> Username</label>
+               <input type="text" id="username" name="username" required>
+
+               <label for="password"> Password</label>
+               <input type="password" id="password" name="password" onkeyup="return checkPassword();" 
+                    title="Must contain at least one number, one uppercase letter, one lowercase, and at least 8 or more characters!">
+               <input type="submit" id="loginbutton" value="Log In">
+               <br>
+               <input type="button" class="forgot" value=" Forgot Password?">
+               <input type="button" class="newAcnt" value="Register New Admin Account">
+          </form>
+
+          <div id="message">
+               <h3> Password must contain the following: </h3>
+               <p id="letter" class="invalid"> A lowercase</p>
+               <p id="capital" class="invalid"> A uppercase</p>
+               <p id="number" class="invalid"> A number</p>
+               <p id="length" class="invalid"> Minimum of 8 Characters</p>
+          </div>
+     </div>
+
+     <script>
+          var myInput = document.getElementById("password");
+          var letter = document.getElementById("letter");
+          var capital = document.getElementById("capital");
+          var number = document.getElementById("number");
+          var length = document.getElementById("length");
+
+          myInput.onfocus = function () {
+               document.getElementById("message").style.display = "block";
+          }
+
+          myInput.onblur = function () {
+               document.getElementById("message").style.display = "none";
+          }
+
+          function validateForm(){
+               let x = document.forms["adminForm"]["password"].value
+               if (x =="") { 
+                    alert("Please enter password");
+                    return false;
+               }
+               if (x.length < 8) { 
+                    alert("Password Invalid.");
+                    return false;
+               }
+
+               if (isValid(x) == false) { 
+                    alert("Password Invalid");
+                    return false;
+               }
+
+          } 
+
+          function isValid(str){ 
+               var pattern = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).+$)");
+
+               if (pattern.text(str)) { 
+                    return true;
+               }
+
+               else{ 
+                    alert("Password Invalid");
+                    return false;
+               }
+          } 
+          
+          function checkPassword() {
+
+               //Check for lowercase 
+               var lowercase = /[a-z]/g;
+               if (myInput.value.match(lowercase)) {
+                    letter.classList.remove("invalid");
+                    letter.classList.add("valid");
+               }
+               else {
+                    letter.classList.remove("valid");
+                    letter.classList.add("invalid");
+               }
+
+               //Check for uppercase
+               var uppercase = /[A-Z]/g;
+               if (myInput.value.match(uppercase)) {
+                    capital.classList.remove("invalid");
+                    capital.classList.add("valid");
+               }
+               else {
+                    capital.classList.remove("valid");
+                    capital.classList.add("invalid");
+               }
+
+               //Check for number 
+               var numbers = /[0-9]/g;
+               if (myInput.value.match(numbers)) {
+                    number.classList.remove("invalid");
+                    number.classList.add("valid");
+               }
+               else {
+                    number.classList.remove("valid");
+                    number.classList.add("invalid");
+               }
+               //Check length 
+               if (myInput.value.length >= 8) {
+                    length.classList.remove("invalid");
+                    length.classList.add("valid");
+               }
+               else {
+                    length.classList.remove("valid");
+                    length.classList.add("invalid");
+               }
+
+          } 
+     </script>
+</body>
+
+</html>
