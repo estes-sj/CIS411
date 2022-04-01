@@ -1,7 +1,7 @@
 <!--GET method used to verify username and password with database by Samuel Estes-->
 <!--User Login Authored by Samuel Estes-->
 <!--Form Validation Authored By Samuel Estes (JavaScript) (Uncomment to use)-->
-
+<!--HR: https://www.tutorialspoint.com/php/php_mysql_login.htm-->
 
 <?php
    include("config.php");
@@ -64,7 +64,7 @@
     <section name="sign_form" id="sign_form">
         <h1>Sign-In</h1>
         <p>
-            Don't have an account? <a href="client_user_registration.html">Sign Up</a>
+            Don't have an account? <a href="client_user_registration.php">Sign Up</a>
         </p>
         <form name="loginForm" action="" method="post">
         <!-- <form name="loginForm" action="Dashboard.html" method="post" onsubmit=validateForm()> -->

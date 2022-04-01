@@ -6,6 +6,9 @@
    $dbusername = "root";
    $dbpassword = "";
    // Create connection
-   $db = mysqli_connect($severname, $dbusername, $dbpassword, $dbname);
-
+   $conn = new mysqli($severname, $dbusername, $dbpassword, $dbname);
+   // Check connection
+   if ($conn->connect_error) {
+   die("Connection failed: " . $conn->connect_error);
+   }
    ?>

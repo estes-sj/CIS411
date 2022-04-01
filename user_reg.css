@@ -1,5 +1,5 @@
 body {
-    background-color: #E07A5F;
+    background-color: #F4F1DE;
 }
 h1 {
     color: #3D405B;
@@ -51,7 +51,7 @@ select {
     padding-right: 60px;
 }
 #sign_form {
-    background-color: #F2CC8F;
+    background-color: #E07A5F;
     width: 400px;
     height: 500px;
     display: block;
