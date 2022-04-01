@@ -1,3 +1,4 @@
+<!-- https://yakshbhesaniya.medium.com/create-change-edit-profile-module-in-php-1850030087f6 was a resource I used in the making of this code. This code was authored by Zachary Farr-->
 <?php
 include "serverPut.php";
 	$email=$_POST['email'];
@@ -26,5 +27,4 @@ include "serverPut.php";
 	{
 		echo "Something went wrong, plese try again.";
 	}
-
 ?>
