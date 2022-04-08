@@ -1,0 +1,23 @@
+/* Author: Cadet Emily Hattman */
+
+body { 
+    background-color:#f4f1de;
+}
+ 
+.button1 { 
+    background-color: #E07A5F;
+    border: none; 
+    color:#f4f1de;
+
+} 
+.delete { 
+    border: 4px solid #E07A5F;
+    text-align: center;
+    background-color: #E07A5F;
+    box-sizing: border-box;
+    color: #f4f1de;
+    border-radius: 6px; 
+}
+
+
+
