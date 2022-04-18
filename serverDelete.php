@@ -1,9 +1,10 @@
-<?php 
-
-$model=$_REQUEST['model'];
+<?php
+// Author: Cadet Emily Hattman
+//REST server
+$email=$_REQUEST['email'];
     //Data access
         $servername = "localhost";
-        $dbname = "dealer";
+        $dbname = "bargain_bites";
         $username = "root";
         $password = "";
 
@@ -14,17 +15,17 @@ $model=$_REQUEST['model'];
             die("Connection failed: ".$conn->connect_error);
         }
 
-        $sql = "delete from vehicles WHERE model='$model'";
+        $sql = "delete from users WHERE email='$email'";
         //echo $sql; exit; //debug query
         $result = $conn->query($sql);
 
         if($result)//succesfully inserted
 
         {
-            response(200,"Product Deleted",$result);
+            response(200,"User Deleted",$result);
         }
         else {
-            response(400,"Product not updated",$result);
+            response(400,"User not deleted",$result);
         }
 
         function response($status, $status_message,$data)
@@ -39,40 +40,4 @@ $model=$_REQUEST['model'];
             echo $json_response;
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-?> 
+        ?>
